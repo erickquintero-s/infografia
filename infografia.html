@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Desconexión Laboral - MEJIA VILLEGAS CONSTRUCTORES S.A.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+        }
+        .flow-step:not(:last-child)::after {
+            content: '▼';
+            font-size: 2rem;
+            color: #009BDE;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="bg-[#00446A] text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center text-white mb-12">
+            <h2 class="text-xl md:text-2xl font-bold text-[#9BDAF1]">MEJIA VILLEGAS CONSTRUCTORES S.A.</h2>
+            <h1 class="text-4xl md:text-6xl font-black mt-2">Política de Desconexión Laboral</h1>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-[#9BDAF1]">Garantizando el equilibrio entre tu vida laboral y personal.</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <section class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#00446A]">Tu Derecho Fundamental: El Tiempo de Descanso</h2>
+                <p class="mt-4 text-lg max-w-4xl mx-auto">Esta política asegura tu derecho a no tener contacto por motivos laborales fuera de tu jornada. Tu tiempo de descanso, licencias y vacaciones son exclusivamente tuyos.</p>
+                <div class="mt-8 chart-container">
+                    <canvas id="balanceChart"></canvas>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">Visualización del balance ideal en un día de 24 horas. La desconexión protege tu tiempo personal y de descanso, que es esencial para tu bienestar y productividad.</p>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#0072B2] mb-4 text-center">⚖️ Tus Derechos como Colaborador</h3>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start"><span class="text-[#0072B2] mr-3 font-bold">✓</span><div>No ser contactado fuera del horario laboral.</div></li>
+                        <li class="flex items-start"><span class="text-[#0072B2] mr-3 font-bold">✓</span><div>No tener la obligación de responder comunicaciones.</div></li>
+                        <li class="flex items-start"><span class="text-[#0072B2] mr-3 font-bold">✓</span><div>Disfrutar tus descansos y vacaciones sin interrupciones.</div></li>
+                        <li class="flex items-start"><span class="text-[#0072B2] mr-3 font-bold">✓</span><div>Recibir compensación justa por horas extras laboradas.</div></li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#0072B2] mb-4 text-center">🤝 Nuestro Compromiso como Empresa</h3>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start"><span class="text-[#0072B2] mr-3 font-bold">✓</span><div>Garantizar y respetar activamente tu derecho a desconectar.</div></li>
+                        <li class="flex items-start"><span class="text-[#0072B2] mr-3 font-bold">✓</span><div>Establecer directrices claras sobre la comunicación.</div></li>
+                        <li class="flex items-start"><span class="text-[#0072B2] mr-3 font-bold">✓</span><div>Capacitar a líderes y equipos sobre esta política.</div></li>
+                        <li class="flex items-start"><span class="text-[#0072B2] mr-3 font-bold">✓</span><div>Promover una cultura de respeto al tiempo personal y familiar.</div></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#00446A] text-center">Proceso de Nuestro Compromiso</h2>
+                <p class="mt-2 text-lg text-center max-w-4xl mx-auto mb-8">Para asegurar que esta política sea una realidad, seguimos un proceso claro y continuo de mejora y soporte para todos nuestros colaboradores.</p>
+                <div class="flex flex-col md:flex-row md:justify-around items-center text-center space-y-8 md:space-y-0 md:space-x-4">
+                    <div class="flow-step flex-col w-full md:w-1/4">
+                        <div class="text-5xl mb-2">💡</div>
+                        <h4 class="text-xl font-bold text-[#0072B2]">Capacitación</h4>
+                        <p>Formación sobre la importancia y el alcance de la desconexión laboral.</p>
+                    </div>
+                     <div class="flow-step flex-col w-full md:w-1/4">
+                        <div class="text-5xl mb-2">🛠️</div>
+                        <h4 class="text-xl font-bold text-[#0072B2]">Herramientas</h4>
+                        <p>Implementación de tecnologías que facilitan la desconexión (ej. autorespuestas).</p>
+                    </div>
+                     <div class="flow-step flex-col w-full md:w-1/4">
+                        <div class="text-5xl mb-2">🗣️</div>
+                        <h4 class="text-xl font-bold text-[#0072B2]">Gestión Clara</h4>
+                        <p>Mecanismos para que los equipos gestionen sus comunicaciones eficientemente.</p>
+                    </div>
+                    <div class="flow-step flex-col w-full md:w-1/4">
+                        <div class="text-5xl mb-2">🛡️</div>
+                        <h4 class="text-xl font-bold text-[#0072B2]">Soporte</h4>
+                        <p>Procedimiento interno para tramitar quejas sobre la vulneración del derecho.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#00446A] text-center">Casos Excepcionales: ¿Cuándo se Justifica el Contacto?</h2>
+                <p class="mt-2 text-lg text-center max-w-4xl mx-auto">El contacto fuera del horario es extraordinario. No debe ser la norma. Ocurrirá solo en situaciones críticas, será notificado y compensado según la ley.</p>
+                 <div class="mt-8 chart-container mx-auto">
+                    <canvas id="exceptionsChart"></canvas>
+                </div>
+                <p class="mt-4 text-sm text-center text-gray-500">Esta gráfica ilustra la frecuencia esperada: la gran mayoría de los días deben estar libres de contacto laboral fuera de horario.</p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="border-2 border-[#009BDE] rounded-lg p-4">
+                        <h4 class="font-bold text-xl text-[#0072B2]">🚨 Fuerza Mayor</h4>
+                        <p class="mt-2">Eventos imprevistos fuera del control de la empresa que requieren acción inmediata.</p>
+                    </div>
+                    <div class="border-2 border-[#009BDE] rounded-lg p-4">
+                         <h4 class="font-bold text-xl text-[#0072B2]">🏗️ Riesgo Crítico</h4>
+                        <p class="mt-2">Incidentes en obras o fallas que pongan en riesgo la infraestructura o la seguridad.</p>
+                    </div>
+                    <div class="border-2 border-[#009BDE] rounded-lg p-4">
+                        <h4 class="font-bold text-xl text-[#0072B2]">⚙️ Emergencia Operacional</h4>
+                        <p class="mt-2">Situaciones que no pueden esperar y que generarían un perjuicio significativo.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="text-center text-white mt-12 py-6 border-t border-[#0072B2]">
+            <p class="font-bold">MEJIA VILLEGAS CONSTRUCTORES S.A.</p>
+            <p class="text-sm text-[#9BDAF1]">Comprometidos con tu bienestar.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const tooltipTitleCallback = function(tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+
+            const balanceCtx = document.getElementById('balanceChart').getContext('2d');
+            new Chart(balanceCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Horas de Trabajo', 'Tiempo Personal', 'Descanso'],
+                    datasets: [{
+                        label: 'Distribución del Día',
+                        data: [8, 8, 8],
+                        backgroundColor: [
+                            '#0072B2',
+                            '#4EC5F1',
+                            '#00446A'
+                        ],
+                        borderColor: '#FFFFFF',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#333',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+
+            const exceptionsCtx = document.getElementById('exceptionsChart').getContext('2d');
+            new Chart(exceptionsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Días Laborales Estándar', 'Días con Contacto Excepcional'],
+                    datasets: [{
+                        label: 'Frecuencia de Contacto Fuera de Horario (Ejemplo Mensual)',
+                        data: [21, 1],
+                        backgroundColor: [
+                            '#009BDE',
+                            '#00446A'
+                        ],
+                        borderColor: [
+                           '#0072B2',
+                           '#002E4A'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                             ticks: { color: '#333' }
+                        },
+                        y: {
+                             ticks: { color: '#333' }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                         tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>
